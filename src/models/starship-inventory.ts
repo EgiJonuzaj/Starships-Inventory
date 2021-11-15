@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const StarshipSchema = new mongoose.Schema({
+const StarshipInventorySchema = new mongoose.Schema({
   model: {
     type: String,
     required: true,
@@ -11,9 +11,9 @@ const StarshipSchema = new mongoose.Schema({
   },
 });
 
-const Starship = mongoose.model<{ model: string; count: number }>(
-  "Starship",
-  StarshipSchema
+const StarshipInventory = mongoose.model<{ model: string; count: number }>(
+  "StarshipInventory",
+  StarshipInventorySchema
 );
 
-export default Starship;
+export default StarshipInventory;
